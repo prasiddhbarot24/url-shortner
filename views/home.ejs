@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h2>URL Shortner</h2>
+   
+    <div>
+    <form method ="post" action="/url" >
+        <label for="orignal url" >Enter your orignal URL :</label>
+        <input type="text" name="url" placeholder="https://example.com" class="input">
+        <button type="submit"> Generate</button>
+    </form>
+    <% if (locals.id) { %>
+        <p>Get's your Shorturl : http://localhost:8005/url/<%= id %></p>
+    <% } %>
+
+
+</div>
+</body>
+</html>
